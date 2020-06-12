@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminmasterpage.master.cs" Inherits="adminmasterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <style type="text/css">
+    .LeftBox{
+        position:fixed;
+        width :18vw;
+        height:100%;
+        background-color:rgb(0, 255, 255,0.35);
+        float:left;
+        margin-right:5px;   
+    }
+    .ContentBox{
+        width :80vw;
+        height:auto;             
+        float:right;
+        margin-right:5px;
+    }
+    .backgrandimage{
+       background-image:url('resim/tapaarkaa.png'); 
+       /*background-repeat:no-repeat;*/
+       background-size:100%;
+       /*position:absolute; 
+       z-index:-1; 
+       width:100%; 
+       height:100%;*/
+     }
+    .btn-1 {
+        padding: 1px 24px;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #bbb;
+    }
+    .btn-1:hover {
+        background-color: #4CAF50;
+    }
+    .btn-1:active {
+        background-color: #4CAF50;
+        box-shadow: 0 3px #444;
+        transform: translateY(3px);
+    }
+    #container
+    {
+        width: 250px;
+        height: 380px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        margin-left: -50px;
+        margin-top: -50px;
+        margin-bottom:-50px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    .textboxcss{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    #eklemeekrancss
+    {
+        width: 700px;
+        height: 673px;
+        position: absolute;
+        left: 35%;
+        top: 20%;
+        margin-left: -50px;
+        margin-top: -50px;
+        margin-bottom: -50px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    #guncelekrancss
+    {
+        width: 700px;
+        height: 880px;
+        position: absolute;
+        left: 35%;
+        top: 20%;
+        margin-left: -50px;
+        margin-top: -50px;
+        margin-bottom: -50px;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body class="backgrandimage">
+    <form id="form1" runat="server">
+        <center>
+            <div class="LeftBox" >
+                    <ul class="nav flex-column navbar-fixed">
+                        <li class="nav-item">
+                        <a class="nav-link active" href="anasayfa.aspx" ><image src="resim/tapaicon.png" width="100%"></image></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="xyz-admin-page-zxw.aspx">Soru Ekleme Ekranı</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="xyz-admin-page3-zxw.aspx">Sayfa Ekleme Ekranı</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="xyz-admin-page4-zxw.aspx">Sayfa Güncelleme ve Silme Ekranı</a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class="ContentBox">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" />
+            </div>
+   
+        </center>
+            </form>
+</body>
+
+</html>
+
